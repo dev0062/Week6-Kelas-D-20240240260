@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nama": "Kopi Susu Gula Aren",
+    "tipe": "Coffee",
+    "kategori": "Best Seller",
+    "harga": 18000,
+    "gambar": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
+    "keunggulan": "100% Arabika lokal dengan gula aren organik yang creamy dan manisnya pas"
+  },
+  {
+    "id": 2,
+    "nama": "Americano Peach Cold Brew",
+    "tipe": "Signature",
+    "kategori": "Segar",
+    "harga": 22000,
+    "gambar": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+    "keunggulan": "Seduh dingin selama 16 jam dengan ekstrak buah persik segar yang bikin fokus"
+  },
+  {
+    "id": 3,
+    "nama": "Ceremonial Matcha Espresso",
+    "tipe": "Signature",
+    "kategori": "Signature",
+    "harga": 25000,
+    "gambar": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80",
+    "keunggulan": "Perpaduan matcha Jepang asli dengan shot espresso hangat tanpa pemanis buatan"
+  },
+  {
+    "id": 4,
+    "nama": "Butterscotch Sea Salt Latte",
+    "tipe": "Coffee",
+    "kategori": "Menu Baru",
+    "harga": 23000,
+    "gambar": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80",
+    "keunggulan": "Kombinasi sea salt foam gurih lembut dengan saus butterscotch homemade"
+  },
+  {
+    "id": 5,
+    "nama": "Belgian Dark Chocolate",
+    "tipe": "Non-Coffee",
+    "kategori": "Favorit",
+    "harga": 21000,
+    "gambar": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80",
+    "keunggulan": "Cokelat hitam Belgia pekat dengan tekstur susu steamed yang velvety dan menenangkan"
+  },
+  {
+    "id": 6,
+    "nama": "Hojicha Oat Milk Latte",
+    "tipe": "Non-Coffee",
+    "kategori": "Plant Based",
+    "harga": 24000,
+    "gambar": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80",
+    "keunggulan": "Teh hijau panggang khas Jepang berpadu dengan oat milk rendah kalori yang nutty"
+  }
+]

@@ -1,0 +1,341 @@
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --text-main: #18181b;
+  --text-muted: #71717a;
+  --border: #e4e4e7;
+  --accent: #27272a;
+  --brand: #9a5b33;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar Minimalis */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 6%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--brand);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 1.75rem;
+  transition: color 0.2s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* Hero Minimalis */
+.hero {
+  margin-bottom: 2.25rem;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand);
+  background: #f5ebe6;
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 600px;
+  font-size: 0.95rem;
+}
+
+/* Toolbar: Filter & Search */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  border-color: var(--text-main);
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  background: var(--text-main);
+  color: #fff;
+  border-color: var(--text-main);
+}
+
+.search-box input {
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 0.85rem;
+  width: 240px;
+  background: var(--surface);
+  transition: border 0.2s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--text-main);
+}
+
+.status-bar {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* Grid & Interactive Card */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+  border-color: #d4d4d8;
+}
+
+.card-img {
+  position: relative;
+  height: 190px;
+  background: #f4f4f5;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .card-img img {
+  transform: scale(1.04);
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(24, 24, 27, 0.85);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.card-header-row h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.price-tag {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--brand);
+  white-space: nowrap;
+}
+
+.card-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+  flex: 1;
+}
+
+/* Interactive Controls inside Card */
+.card-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f5;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.temp-toggle {
+  display: flex;
+  gap: 4px;
+}
+
+.temp-btn {
+  border: none;
+  background: transparent;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.temp-btn.active {
+  background: var(--surface);
+  color: var(--text-main);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+.qty-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.qty-btn:hover {
+  background: #e4e4e7;
+}
+
+.qty-val {
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 16px;
+  text-align: center;
+}
+
+.btn-order {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--text-main);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-order:hover {
+  opacity: 0.9;
+}
+
+.btn-order:active {
+  transform: scale(0.98);
+}

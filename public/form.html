@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout & Caption — Kopi Sederhana</title>
+  <link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="dot"></span> Kopi Sederhana.
+    </div>
+    <nav class="nav-links">
+      <a href="./index.html">Etalase</a>
+      <a href="./form.html" class="active">Checkout & Caption</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="layout-grid">
+      <!-- Kolom Kiri: Form (Bagian 1, 2, 3) -->
+      <section class="panel">
+        <div class="panel-header">
+          <h1>Detail Pesanan & Caption</h1>
+          <p>Data terisi otomatis dari etalase atau klik tombol <b>Fetch Preset</b>.</p>
+        </div>
+
+        <!-- Area Status (Wajib di Bagian 1) -->
+        <div id="statusArea" class="status-banner">
+          Siap memproses pesanan. Silakan isi form atau muat data JSON.
+        </div>
+
+        <form id="captionForm" novalidate>
+          <div class="form-group">
+            <label for="namaProduk">Nama Menu Kopi</label>
+            <input type="text" id="namaProduk" placeholder="Contoh: Kopi Susu Gula Aren">
+          </div>
+
+          <div class="form-group">
+            <label for="keunggulanProduk">Keunggulan Menu</label>
+            <textarea id="keunggulanProduk" rows="3" placeholder="Jelaskan keunikan rasa atau bahan utama..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hargaProduk">Harga Satuan (Rp)</label>
+              <input type="number" id="hargaProduk" value="18000">
+            </div>
+            <div class="form-group">
+              <label for="jumlahProduk">Jumlah Gelas</label>
+              <input type="number" id="jumlahProduk" min="1" value="1">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="suhuPenyajian">Penyajian</label>
+              <select id="suhuPenyajian">
+                <option value="Ice">🧊 Ice (Dingin)</option>
+                <option value="Hot">☕ Hot (Hangat)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="gayaCaption">Gaya Caption</label>
+              <select id="gayaCaption">
+                <option value="santai">Casual / Instagram</option>
+                <option value="promo">Promo Hard-Selling</option>
+                <option value="story">Storytelling Aesthetic</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <!-- Tombol Fetch JSON (Bagian 3) -->
+            <button type="button" id="btnFetch" class="btn-outline">
+             Fetch Preset JSON
+            </button>
+            <!-- Tombol Submit (Bagian 2) -->
+            <button type="submit" class="btn-solid">
+              Generate Output &rarr;
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Kolom Kanan: Area Output Interaktif (Bagian 1 & 2) -->
+      <section class="panel output-panel">
+        <div class="output-header">
+          <h2>Live Output</h2>
+          <button type="button" id="btnCopy" class="btn-copy">Salin Teks</button>
+        </div>
+        <div id="outputArea" class="output-content">Belum ada data yang di-generate. Silakan isi form di samping lalu klik "Generate Output".</div>
+      </section>
+    </div>
+  </main>
+
+  <script src="./js/form.js"></script>
+</body>
+</html>

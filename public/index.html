@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Sederhana — Interactive Storefront</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="dot"></span> Kopi Dev Bahagia.
+    </div>
+    <nav class="nav-links">
+      <a href="./index.html" class="active">Etalase</a>
+      <a href="./form.html">Checkout & Caption</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Pilih racikan kopimu hari ini.</h1>
+      <p>Atur suhu penyajian dan jumlah gelas langsung dari kartu etalase, lalu lanjutkan ke pembuatan struk & caption otomatis.</p>
+    </section>
+
+    <!-- Kontrol Filter & Pencarian DOM -->
+    <section class="toolbar">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="tab-btn active" data-filter="all">Semua</button>
+        <button class="tab-btn" data-filter="Coffee">Coffee</button>
+        <button class="tab-btn" data-filter="Signature">Signature</button>
+        <button class="tab-btn" data-filter="Non-Coffee">Non-Coffee</button>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari menu kopi...">
+      </div>
+    </section>
+
+    <div class="status-bar">
+      <span id="statusCatalog">Memuat etalase...</span>
+    </div>
+
+    <!-- Grid Card Interaktif -->
+    <section id="menuList" class="menu-grid"></section>
+  </main>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
